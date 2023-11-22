@@ -1,25 +1,39 @@
-
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 public class BallInput : MonoBehaviour
+
 {
-    // Update is called once per frame
+
+    private Rigidbody ballRigidBody;
+
+    private void Start()
+    {
+        ballRigidBody = Ball.GetComponent<Rigidbody>();
+    }
     void Update()
     {
-        // 新しいInput Systemを使用して"W"キーの入力を検知
-        if (Keyboard.current.wKey.wasPressedThisFrame)
-        {
-            Debug.Log("Wキーが押されました!");
-        }
-        // Wキーが押され続けている間
         if (Keyboard.current.wKey.isPressed)
         {
-            Debug.Log("Wキーが押され続けてます!");
+            ballRigidBody.AddForce(Vector3.forward);
         }
-        // Wキーが離された瞬間だけ評価する
-        if (Keyboard.current.wKey.wasReleasedThisFrame)
+        if (Keyboard.current.aKey.isPressed)
         {
-            Debug.Log("Wキーが離されました!");
+            ballRigidBody.AddForce(Vector3.left);
+        }
+        if (Keyboard.current.sKey.isPressed)
+        {
+            ballRigidBody.AddForce(Vector3.back);
+        }
+        if (Keyboard.current.dKey.isPressed)
+        {
+            ballRigidBody.AddForce(Vector3.right);
         }
     }
+
+
+
+
+
+
 }
+
