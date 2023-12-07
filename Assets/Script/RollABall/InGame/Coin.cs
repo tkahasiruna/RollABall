@@ -28,6 +28,7 @@ public class Coin : MonoBehaviour
     }
 
     private bonusChance bonusChances;
+    public Material CoinMaterial;
     void Start()
     {
         StartCoroutine(BonusTimeCoroutine());
@@ -36,10 +37,13 @@ public class Coin : MonoBehaviour
     {
 
         bonusChances = bonusChance.BigBonus;
+        CoinMaterial.color = Color.yellow;
         yield return new WaitForSeconds(bigBonusTime);
         bonusChances = bonusChance.SmallBinus;
+        CoinMaterial.color = Color.cyan;
         yield return new WaitForSeconds(bonusTime - bigBonusTime);
         bonusChances = bonusChance.NoBonus;
+        CoinMaterial.color = Color.red;
         yield return new WaitForSeconds(disappearTime - bonusTime);
         Destroy(this.gameObject);
 
