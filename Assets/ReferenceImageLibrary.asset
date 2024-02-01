@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 4881381055294806600
+  m_GuidHigh: 17316294525740949927
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5267900571027987971
+      m_GuidHigh: 3271374013149309863
+    m_SerializedTextureGuid:
+      m_GuidLow: 12088804744202918036
+      m_GuidHigh: 1062371663844185739
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Cube
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5154412138589799793
+      m_GuidHigh: 4479964948484146076
+    m_SerializedTextureGuid:
+      m_GuidLow: 13881373074752117088
+      m_GuidHigh: 12233080888943933257
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sphere
+    m_Texture: {fileID: 0}
